@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERN Stack Assignment</title>
+    <link rel="stylesheet" href="bootstrap/style.css"> <!-- Link Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .profile img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .folder {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .folder:hover {
+            background: #e2e6ea;
+        }
+        .file-list {
+            display: none;
+            margin-top: 5px;
+        }
+        .file-list a {
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        .file-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile">
+            <img src="shubham_photo.jpg" alt="Your Photo">
+            <h2>Subham Agarwal</h2>
+            <p>Registration Number:22BCY10025</p>
+        </div>
+
+        <h3>MERN Stack Assignment</h3>
+
+        <div class="folder" onclick="toggleFiles('html')">📂 HTML Folder</div>
+        <div class="file-list" id="html-files"></div>
+
+        <div class="folder" onclick="toggleFiles('css')">📂 CSS Folder</div>
+        <div class="file-list" id="css-files"></div>
+
+        <div class="folder" onclick="toggleFiles('bootstrap')">📂 Bootstrap Folder</div>
+        <div class="file-list" id="bootstrap-files"></div>
+    </div>
+
+    <script>
+        function toggleFiles(folder) {
+            let fileList = document.getElementById(folder + '-files');
+            if (fileList.style.display === "none" || fileList.style.display === "") {
+                fileList.style.display = "block";
+                loadFiles(folder);
+            } else {
+                fileList.style.display = "none";
+            }
+        }
+
+        function loadFiles(folder) {
+            let files = {
+                'html': ['Task1.html', 'Task2.html', 'Task3.html','Task4.html','Task5.html'],
+                'css': ['task1.html', 'task2.html','task3.html', 'task4.html', 'task5.html','task6.html','task7.html'],
+                'bootstrap': ['bootstrap1.html', 'bootstrap2.html','bootstrap3.html', 'bootstrap4.html','bootstrap5.html','bootstrap6.html']
+            };
+
+            let fileList = document.getElementById(folder + '-files');
+            fileList.innerHTML = '';
+
+            files[folder].forEach(file => {
+                let a = document.createElement('a');
+                a.href = folder + '/' + file;
+                a.textContent = file;
+                a.target = "_blank";
+                fileList.appendChild(a);
+            });
+        }
+    </script>
+
+</body>
+</html>
