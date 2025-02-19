@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MERN Stack Assignment</title>
-    <link rel="stylesheet" href="bootstrap/style.css"> <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap/style.css"> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
@@ -22,11 +22,6 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .profile img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 15px;
         }
         .folder {
             background: #f8f9fa;
@@ -57,22 +52,39 @@
 <body>
 
     <div class="container">
-        <div class="profile">
-            <img src="shubham_photo.jpg" alt="Your Photo">
-            <h2>Subham Agarwal</h2>
-            <p>Registration Number:22BCY10025</p>
-        </div>
-
+        <h2>Subham Agarwal</h2>
+        <p>Registration Number: 22BCY10025</p>
         <h3>MERN Stack Assignment</h3>
 
         <div class="folder" onclick="toggleFiles('html')">📂 HTML Folder</div>
-        <div class="file-list" id="html-files"></div>
+        <div class="file-list" id="html-files">
+            <a href="./HTML/Task1.html">Task-1 </a>
+            <a href="./HTML/Task2.html">Task-2 </a>
+            <a href="./HTML/Task3.html">Task-3 </a>
+            <a href="./HTML/Task4.html">Task-4 </a>
+            <a href="./HTML/Task5.html">Task-5 </a>
+        </div>
 
-        <div class="folder" onclick="toggleFiles('css')">📂 CSS Folder</div>
-        <div class="file-list" id="css-files"></div>
+        <div class="folder" onclick="toggleFile('css')">📂 CSS Folder</div>
+        <div class="file-list" id="css-files">
+            <a href="./CSS/task1.html">Task-1 </a>
+            <a href="./CSS/task2.html">Task-2 </a>
+            <a href="./CSS/task3.html">Task-3 </a>
+            <a href="./CSS/task4.html">Task-4 </a>
+            <a href="./CSS/task5.html">Task-5 </a>
+            <a href="./CSS/task6.html">Task-6 </a>
+            <a href="./CSS/task7.html">Task-7 </a>
+        </div>
 
         <div class="folder" onclick="toggleFiles('bootstrap')">📂 Bootstrap Folder</div>
-        <div class="file-list" id="bootstrap-files"></div>
+        <div class="file-list" id="bootstrap-files">
+            <a href="./BOOTSTRAP/bootstrap1.html">Task-1 </a>
+            <a href="./BOOTSTRAP/bootstrap2.html">Task-2 </a>
+            <a href="./BOOTSTRAP/bootstrap3.html">Task-3 </a>
+            <a href="./BOOTSTRAP/bootstrap4.html">Task-4 </a>
+            <a href="./BOOTSTRAP/bootstrap5.html">Task-5 </a>
+            <a href="./BOOTSTRAP/bootstrap6.html">Task-6 </a>
+        </div>
     </div>
 
     <script>
@@ -80,11 +92,12 @@
             let fileList = document.getElementById(folder + '-files');
             if (fileList.style.display === "none" || fileList.style.display === "") {
                 fileList.style.display = "block";
-                loadFiles(folder);
             } else {
                 fileList.style.display = "none";
             }
         }
+<<<<<<< HEAD
+=======
 
         function loadFiles(folder) {
             let files = {
@@ -104,6 +117,7 @@
                 fileList.appendChild(a);
             });
         }
+>>>>>>> 3defd691ec31a880b4baf41d7fefe2bf5519fb7f
     </script>
 
 </body>
