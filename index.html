@@ -27,16 +27,9 @@
             background: #f8f9fa;
             padding: 10px;
             margin: 10px 0;
-            cursor: pointer;
             border-radius: 5px;
             font-weight: bold;
-        }
-        .folder:hover {
-            background: #e2e6ea;
-        }
-        .file-list {
-            display: none;
-            margin-top: 5px;
+            text-align: left;
         }
         .file-list a {
             display: block;
@@ -56,69 +49,36 @@
         <p>Registration Number: 22BCY10025</p>
         <h3>MERN Stack Assignment</h3>
 
-        <div class="folder" onclick="toggleFiles('html')">📂 HTML Folder</div>
-        <div class="file-list" id="html-files">
-            <a href="./HTML/Task1.html">Task-1 </a>
-            <a href="./HTML/Task2.html">Task-2 </a>
-            <a href="./HTML/Task3.html">Task-3 </a>
-            <a href="./HTML/Task4.html">Task-4 </a>
-            <a href="./HTML/Task5.html">Task-5 </a>
+        <div class="folder">📂 HTML Folder</div>
+        <div class="file-list">
+            <a href="./HTML/Task1.html">Task-1</a>
+            <a href="./HTML/Task2.html">Task-2</a>
+            <a href="./HTML/Task3.html">Task-3</a>
+            <a href="./HTML/Task4.html">Task-4</a>
+            <a href="./HTML/Task5.html">Task-5</a>
         </div>
 
-        <div class="folder" onclick="toggleFile('css')">📂 CSS Folder</div>
-        <div class="file-list" id="css-files">
-            <a href="./CSS/task1.html">Task-1 </a>
-            <a href="./CSS/task2.html">Task-2 </a>
-            <a href="./CSS/task3.html">Task-3 </a>
-            <a href="./CSS/task4.html">Task-4 </a>
-            <a href="./CSS/task5.html">Task-5 </a>
-            <a href="./CSS/task6.html">Task-6 </a>
-            <a href="./CSS/task7.html">Task-7 </a>
+        <div class="folder">📂 CSS Folder</div>
+        <div class="file-list">
+            <a href="./CSS/task1.html">Task-1</a>
+            <a href="./CSS/task2.html">Task-2</a>
+            <a href="./CSS/task3.html">Task-3</a>
+            <a href="./CSS/task4.html">Task-4</a>
+            <a href="./CSS/task5.html">Task-5</a>
+            <a href="./CSS/task6.html">Task-6</a>
+            <a href="./CSS/task7.html">Task-7</a>
         </div>
 
-        <div class="folder" onclick="toggleFiles('bootstrap')">📂 Bootstrap Folder</div>
-        <div class="file-list" id="bootstrap-files">
-            <a href="./BOOTSTRAP/bootstrap1.html">Task-1 </a>
-            <a href="./BOOTSTRAP/bootstrap2.html">Task-2 </a>
-            <a href="./BOOTSTRAP/bootstrap3.html">Task-3 </a>
-            <a href="./BOOTSTRAP/bootstrap4.html">Task-4 </a>
-            <a href="./BOOTSTRAP/bootstrap5.html">Task-5 </a>
-            <a href="./BOOTSTRAP/bootstrap6.html">Task-6 </a>
+        <div class="folder">📂 Bootstrap Folder</div>
+        <div class="file-list">
+            <a href="./BOOTSTRAP/bootstrap1.html">Task-1</a>
+            <a href="./BOOTSTRAP/bootstrap2.html">Task-2</a>
+            <a href="./BOOTSTRAP/bootstrap3.html">Task-3</a>
+            <a href="./BOOTSTRAP/bootstrap4.html">Task-4</a>
+            <a href="./BOOTSTRAP/bootstrap5.html">Task-5</a>
+            <a href="./BOOTSTRAP/bootstrap6.html">Task-6</a>
         </div>
     </div>
-
-    <script>
-        function toggleFiles(folder) {
-            let fileList = document.getElementById(folder + '-files');
-            if (fileList.style.display === "none" || fileList.style.display === "") {
-                fileList.style.display = "block";
-            } else {
-                fileList.style.display = "none";
-            }
-        }
-<<<<<<< HEAD
-=======
-
-        function loadFiles(folder) {
-            let files = {
-                'HTML': ['./HTML/Task1.html', 'Task2.html', 'Task3.html','Task4.html','Task5.html'],
-                'CSS': ['task1.html', 'task2.html','task3.html', 'task4.html', 'task5.html','task6.html','task7.html'],
-                'BOOTSTRAP': ['bootstrap1.html', 'bootstrap2.html','bootstrap3.html', 'bootstrap4.html','bootstrap5.html','bootstrap6.html']
-            };
-
-            let fileList = document.getElementById(folder + '-files');
-            fileList.innerHTML = '';
-
-            files[folder].forEach(file => {
-                let a = document.createElement('a');
-                a.href = folder + '/' + file;
-                a.textContent = file;
-                a.target = "_blank";
-                fileList.appendChild(a);
-            });
-        }
->>>>>>> 3defd691ec31a880b4baf41d7fefe2bf5519fb7f
-    </script>
 
 </body>
 </html>
